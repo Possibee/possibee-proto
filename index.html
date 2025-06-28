@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Possibee - Cross-Pollinate the Minds | Moments of Clarity App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Cosmic Navy Color System */
+            --cosmic-void: #040B1A;
+            --deep-navy: #0F1B2F;
+            --star-navy: #1E2A47;
+            --nebula-blue: #2A3B5C;
+            --quantum-purple: #6B46C1;
+            --consciousness-cyan: #06B6D4;
+            --healing-green: #10B981;
+            --life-force-yellow: #F59E0B;
+            --cosmic-white: #FFFFFF;
+            --star-silver: #CBD5E1;
+            
+            /* Typography */
+            --font-consciousness: 'Playfair Display', serif;
+            --font-neural: 'Inter', system-ui, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-neural);
+            background: var(--cosmic-void);
+            color: var(--cosmic-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Quantum Field Effect */
+        .cosmic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60vh;
+            pointer-events: none;
+            z-index: 1;
+            background: 
+                radial-gradient(ellipse at 50% 0%, rgba(107, 70, 193, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 30% 10%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 40%);
+            animation: quantum-shift 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes quantum-shift {
+            0% { 
+                transform: scale(1) rotate(0deg);
+                opacity: 0.6;
+            }
+            100% { 
+                transform: scale(1.05) rotate(0.5deg);
+                opacity: 0.8;
+            }
+        }
+
+        /* 3D Star Layers with Cursor-Based Parallax */
+        .star-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            transition: transform 0.1s ease-out;
+            z-index: 2;
+        }
+
+        .star-layer-far { 
+            z-index: 2; 
+            opacity: 0.3;
+        }
+        .star-layer-mid { 
+            z-index: 3; 
+            opacity: 0.6;
+        }
+        .star-layer-near { 
+            z-index: 4; 
+            opacity: 0.9;
+        }
+
+        .star-3d {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, transparent 70%);
+        }
+
+        .star-far { 
+            width: 1px; 
+            height: 1px; 
+            animation: star-twinkle 4s ease-in-out infinite; 
+        }
+        .star-mid { 
+            width: 2px; 
+            height: 2px; 
+            animation: star-twinkle 3s ease-in-out infinite; 
+        }
+        .star-near { 
+            width: 3px; 
+            height: 3px; 
+            animation: star-twinkle 2s ease-in-out infinite; 
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.8); 
+        }
+
+        @keyframes star-twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Mouse Trail Particles */
+        .spark-particle {
+            position: fixed;
+            pointer-events: none;
+            border-radius: 50%;
+            z-index: 5;
+            animation: spark-life 1.5s ease-out forwards;
+        }
+
+        @keyframes spark-life {
+            0% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0) rotate(360deg);
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(4, 11, 26, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(107, 70, 193, 0.2);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-text {
+            font-family: var(--font-consciousness);
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--consciousness-cyan), var(--quantum-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-tagline {
+            font-size: 0.8rem;
+            color: var(--star-silver);
+            font-weight: 500;
+            margin-top: 2px;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--star-silver);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--consciousness-cyan);
+        }
+
+        .cta-nav {
+            background: linear-gradient(135deg, var(--consciousness-cyan), var(--quantum-purple));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--consciousness-cyan);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .bee-icon {
+            font-size: 1.5rem;
+            animation: buzz 2s ease-in-out infinite;
+        }
+
+        @keyframes buzz {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-3px) rotate(5deg); }
+            75% { transform: translateY(3px) rotate(-5deg); }
+        }
+
+        .hero-title {
+            font-family: var(--font-consciousness);
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, 
+                var(--cosmic-white) 0%, 
+                var(--consciousness-cyan) 30%, 
+                var(--quantum-purple) 70%, 
+                var(--cosmic-white) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--star-silver);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .viral-badge {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+            border: 2px solid var(--consciousness-cyan);
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            color: var(--consciousness-cyan);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(6, 182, 212, 0.3); }
+            to { box-shadow: 0 0 30px rgba(6, 182, 212, 0.6); }
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--consciousness-cyan), var(--quantum-purple));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--cosmic-white);
+            padding: 1rem 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--consciousness-cyan);
+            color: var(--consciousness-cyan);
+            background: rgba(6, 182, 212, 0.1);
+        }
+
+        /* App Showcase */
+        .app-showcase {
+            position: relative;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .phone-mockup {
+            width: 350px;
+            height: 700px;
+            background: #000;
+            border-radius: 40px;
+            padding: 8px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--deep-navy), var(--star-navy));
+            border-radius: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-interface {
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .app-logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: cosmic-breathe 3s ease-in-out infinite;
+        }
+
+        @keyframes cosmic-breathe {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+            50% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+        }
+
+        .app-title {
+            font-family: var(--font-consciousness);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--consciousness-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .app-subtitle {
+            color: var(--star-silver);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .journey-preview {
+            background: rgba(107, 70, 193, 0.1);
+            border: 2px solid rgba(107, 70, 193, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .journey-title {
+            font-weight: 600;
+            color: var(--cosmic-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .journey-description {
+            font-size: 0.8rem;
+            color: var(--star-silver);
+            line-height: 1.4;
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: -10%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: -5%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .floating-bee {
+            font-size: 2rem;
+            opacity: 0.3;
+            filter: blur(1px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: rgba(15, 27, 47, 0.3);
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: var(--font-consciousness);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--cosmic-white);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--star-silver);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(30, 42, 71, 0.4);
+            border: 2px solid rgba(107, 70, 193, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--consciousness-cyan);
+            box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--cosmic-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            color: var(--star-silver);
+            line-height: 1.6;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .social-proof-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: rgba(30, 42, 71, 0.4);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--consciousness-cyan);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--cosmic-white);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            color: var(--consciousness-cyan);
+            font-weight: 600;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--consciousness-cyan);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--star-silver);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(107, 70, 193, 0.1), rgba(6, 182, 212, 0.1));
+        }
+
+        .final-cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .final-cta-title {
+            font-family: var(--font-consciousness);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--cosmic-white);
+        }
+
+        .final-cta-subtitle {
+            font-size: 1.2rem;
+            color: var(--star-silver);
+            margin-bottom: 2rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background: rgba(15, 27, 47, 0.5);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-family: var(--font-consciousness);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--cosmic-white);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--star-silver);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-card {
+            background: rgba(30, 42, 71, 0.4);
+            border: 2px solid rgba(107, 70, 193, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .mission-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--consciousness-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .about-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .founder-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--consciousness-cyan), var(--quantum-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 20px 40px rgba(6, 182, 212, 0.3);
+        }
+
+        .founder-quote {
+            background: rgba(107, 70, 193, 0.1);
+            border-left: 4px solid var(--consciousness-cyan);
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-style: italic;
+            color: var(--cosmic-white);
+            margin-top: 1rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .pricing-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: rgba(30, 42, 71, 0.4);
+            border: 2px solid rgba(107, 70, 193, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--consciousness-cyan);
+            transform: scale(1.05);
+            background: rgba(6, 182, 212, 0.1);
+        }
+
+        .pricing-card.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--consciousness-cyan), var(--quantum-purple));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cosmic-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--consciousness-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-period {
+            color: var(--star-silver);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            color: var(--star-silver);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pricing-features li::before {
+            content: "✨";
+            font-size: 1rem;
+        }
+
+        .pricing-btn {
+            background: linear-gradient(135deg, var(--consciousness-cyan), var(--quantum-purple));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .pricing-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+        }
+
+        .pricing-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--consciousness-cyan);
+            color: var(--consciousness-cyan);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 5rem 2rem;
+            background: rgba(15, 27, 47, 0.3);
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: rgba(30, 42, 71, 0.4);
+            border: 2px solid rgba(107, 70, 193, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            text-align: left;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--consciousness-cyan);
+            box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+        }
+
+        .product-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, var(--consciousness-cyan), var(--quantum-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cosmic-white);
+        }
+
+        .product-subtitle {
+            color: var(--consciousness-cyan);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .product-description {
+            color: var(--star-silver);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .product-cta {
+            background: linear-gradient(135deg, var(--consciousness-cyan), var(--quantum-purple));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .product-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+        }
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(107, 70, 193, 0.2);
+            background: var(--deep-navy);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            color: var(--star-silver);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero-cta {
+                justify-content: center;
+            }
+            
+            .phone-mockup {
+                width: 280px;
+                height: 560px;
+            }
+            
+            .stats {
+                gap: 1.5rem;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Quantum Field and Star Layers -->
+    <div class="cosmic-background"></div>
+    <div class="star-layer star-layer-far" id="starLayerFar"></div>
+    <div class="star-layer star-layer-mid" id="starLayerMid"></div>
+    <div class="star-layer star-layer-near" id="starLayerNear"></div>
+    
+    <!-- Floating Bee Elements -->
+    <div class="floating-element floating-bee">🐝</div>
+    <div class="floating-element floating-bee">🌸</div>
+    <div class="floating-element floating-bee">✨</div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-text">Possibee</div>
+                <div class="logo-tagline">Cross-Pollinate the Minds</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#products">Products</a></li>
+            </ul>
+            <a href="#download" class="cta-nav">Download App</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="tagline">
+                    <span class="bee-icon">🐝</span>
+                    Cross-Pollinate the Minds
+                </div>
+                
+                <div class="viral-badge">
+                    <span>🔥</span>
+                    <span>Going Viral: #1 Wellness App</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Moments of<br>
+                    Clarity
+                </h1>
+                
+                <p class="hero-subtitle">
+                    The revolutionary app that transforms life's deepest struggles into profound growth through interactive stories, cosmic wisdom, and community connection. Join thousands discovering their purpose through the power of shared human experience.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#download" class="btn-primary">
+                        <span>📱</span>
+                        Start Your Journey
+                    </a>
+                    <a href="#demo" class="btn-secondary">Watch Demo</a>
+                </div>
+            </div>
+            
+            <div class="app-showcase">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-interface">
+                            <div class="app-logo">🌌</div>
+                            <div class="app-title">Moments of Clarity</div>
+                            <div class="app-subtitle">You're Not Alone in This Journey</div>
+                            
+                            <div class="journey-preview">
+                                <div class="journey-title">🌱 Finding Purpose</div>
+                                <div class="journey-description">Discover your ikigai through cosmic perspective and deep self-reflection</div>
+                            </div>
+                            
+                            <div class="journey-preview">
+                                <div class="journey-title">💙 Breaking Free</div>
+                                <div class="journey-description">Transform addiction cycles into freedom through story-based healing</div>
+                            </div>
+                            
+                            <div class="journey-preview">
+                                <div class="journey-title">🌸 Connection</div>
+                                <div class="journey-description">Build meaningful relationships and find your community</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Our Mission</h2>
+                <p>
+                    At Possibee, we believe that healing happens through connection, wisdom grows through sharing, and every moment holds the potential for clarity. We're not just building another wellness app—we're creating a movement.
+                </p>
+                <p>
+                    Born from personal struggles with ADHD, depression, and the search for meaning, Moments of Clarity represents years of research into what actually helps people transform their lives. We combine ancient philosophical wisdom with modern neuroscience, delivering therapeutic experiences through the most powerful medium humans have: story.
+                </p>
+                
+                <div class="mission-card">
+                    <div class="mission-title">🌱 Why We Exist</div>
+                    <p>To replace surface-level wellness apps with deep, transformative experiences that meet people exactly where they are—whether struggling with addiction, depression, ADHD, relationships, or existential questions.</p>
+                </div>
+            </div>
+            
+            <div class="about-visual">
+                <div class="founder-avatar">🧠</div>
+                <h3 style="color: var(--consciousness-cyan); margin-bottom: 1rem;">Founded by Someone Who Gets It</h3>
+                <p style="color: var(--star-silver); text-align: center;">
+                    Built by a developer with 20+ years of experience who understands the struggles of ADHD, the weight of depression, and the desperate search for tools that actually work.
+                </p>
+                
+                <div class="founder-quote">
+                    "I built this because I needed it to exist. Every feature comes from real pain, real struggle, and real breakthroughs. This isn't theoretical—it's personal."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Why Moments of Clarity?</h2>
+            <p class="section-subtitle">
+                Unlike meditation timers or mood trackers, we create transformative experiences that meet you exactly where you are, helping you rewrite your story from survival to thriving.
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">📚</span>
+                    <h3 class="feature-title">Interactive Stories</h3>
+                    <p class="feature-description">
+                        Immersive narratives about addiction, depression, ADHD, relationships, and purpose. Each choice shapes your unique healing journey.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🌌</span>
+                    <h3 class="feature-title">Cosmic Perspective</h3>
+                    <p class="feature-description">
+                        Ancient wisdom meets modern neuroscience. Find meaning in struggle through the vast beauty of human existence.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🐝</span>
+                    <h3 class="feature-title">Community Wisdom</h3>
+                    <p class="feature-description">
+                        Share insights, support others, and grow together. Your breakthrough becomes a seed for someone else's growth.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🧠</span>
+                    <h3 class="feature-title">ADHD & Mental Health</h3>
+                    <p class="feature-description">
+                        Specialized journeys for ADHD, depression, anxiety, and trauma. Practical tools that work with your brain, not against it.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📝</span>
+                    <h3 class="feature-title">Smart Journaling</h3>
+                    <p class="feature-description">
+                        AI-powered prompts that evolve with your journey. Track patterns, celebrate growth, and build lasting habits.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3 class="feature-title">Quick SOS Tools</h3>
+                    <p class="feature-description">
+                        Breathing exercises, mood check-ins, and instant support for overwhelming moments. Help when you need it most.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <h2 class="section-title">Choose Your Journey</h2>
+            <p class="section-subtitle">
+                Start free and upgrade when you're ready to dive deeper into transformative content.
+            </p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Free Explorer</h3>
+                    <div class="pricing-price">$0</div>
+                    <div class="pricing-period">Always Free</div>
+                    
+                    <ul class="pricing-features">
+                        <li>3 complete interactive stories</li>
+                        <li>Basic journaling tools</li>
+                        <li>Mood tracking</li>
+                        <li>Quick breathing exercises</li>
+                        <li>Community access</li>
+                        <li>Daily inspiration quotes</li>
+                    </ul>
+                    
+                    <a href="#download" class="pricing-btn secondary">Start Free</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3 class="pricing-title">Premium Growth</h3>
+                    <div class="pricing-price">$6.99</div>
+                    <div class="pricing-period">per month</div>
+                    
+                    <ul class="pricing-features">
+                        <li>Unlimited interactive stories</li>
+                        <li>Advanced journaling with AI insights</li>
+                        <li>Personalized journey recommendations</li>
+                        <li>Exclusive ADHD & mental health content</li>
+                        <li>Voice message features</li>
+                        <li>Progress analytics & celebration</li>
+                        <li>Priority community support</li>
+                        <li>Early access to new features</li>
+                    </ul>
+                    
+                    <a href="#download" class="pricing-btn">7-Day Free Trial</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Student</h3>
+                    <div class="pricing-price">$3.99</div>
+                    <div class="pricing-period">per month</div>
+                    
+                    <ul class="pricing-features">
+                        <li>Everything in Premium</li>
+                        <li>Student-focused content</li>
+                        <li>Academic stress journeys</li>
+                        <li>Study break meditations</li>
+                        <li>Exam anxiety support</li>
+                        <li>Future career exploration</li>
+                    </ul>
+                    
+                    <a href="#download" class="pricing-btn secondary">Verify Student Status</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="products-container">
+            <h2 class="section-title">The Possibee Ecosystem</h2>
+            <p class="section-subtitle">
+                Multiple ways to cross-pollinate wisdom and transform your life experience.
+            </p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">📱</div>
+                        <div>
+                            <div class="product-title">Moments of Clarity</div>
+                            <div class="product-subtitle">Interactive Stories App</div>
+                        </div>
+                    </div>
+                    
+                    <p class="product-description">
+                        Our flagship mobile app featuring immersive, choice-driven narratives that transform life's deepest struggles into profound growth. Available on iOS and Android with cross-platform sync.
+                    </p>
+                    
+                    <a href="#download" class="product-cta">
+                        <span>📲</span>
+                        Download App
+                    </a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">🤖</div>
+                        <div>
+                            <div class="product-title">Possibee AI</div>
+                            <div class="product-subtitle">Intelligent Wisdom Companion</div>
+                        </div>
+                    </div>
+                    
+                    <p class="product-description">
+                        Your personal AI companion trained on philosophical wisdom, psychological insights, and therapeutic frameworks. Get instant support, personalized guidance, and deep conversations about life's biggest questions.
+                    </p>
+                    
+                    <a href="https://poe.com/Possibee.AI" target="_blank" class="product-cta">
+                        <span>💬</span>
+                        Chat with Possibee AI
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="social-proof-container">
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "I spent 45 minutes in the addiction recovery story and felt more understood than years of therapy. This isn't just an app—it's digital medicine."
+                </div>
+                <div class="testimonial-author">— Sarah M., Beta User</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-text">
+                    "The cosmic perspective helped me see my ADHD as a superpower, not a curse. These stories changed everything for me."
+                </div>
+                <div class="testimonial-author">— Marcus K., Community Member</div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">47</span>
+                    <div class="stat-label">Avg Minutes Per Session</div>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">89%</span>
+                    <div class="stat-label">Weekly Return Rate</div>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">12k+</span>
+                    <div class="stat-label">Life Stories Shared</div>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.9</span>
+                    <div class="stat-label">App Store Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="download">
+        <div class="final-cta-container">
+            <h2 class="final-cta-title">Ready to Transform Your Story?</h2>
+            <p class="final-cta-subtitle">
+                Join thousands who've discovered that healing happens through connection, wisdom grows through sharing, and every moment holds the potential for clarity.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#" class="btn-primary">
+                    <span>🍯</span>
+                    Download Free
+                </a>
+                <a href="#" class="btn-secondary">
+                    <span>🐝</span>
+                    Join the Hive
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Possibee. Cross-pollinating minds, one story at a time. 🐝</p>
+            <p>Built with ❤️ for humans navigating the beautiful complexity of existence.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize all effects
+        document.addEventListener('DOMContentLoaded', function() {
+            create3DStarLayers();
+            setupMouseTrail();
+            setupCursorParallax();
+            setupScrollAnimations();
+        });
+
+        // Create 3D star layers
+        function create3DStarLayers() {
+            const layers = [
+                { id: 'starLayerFar', className: 'star-far', count: window.innerWidth < 768 ? 25 : 50 },
+                { id: 'starLayerMid', className: 'star-mid', count: window.innerWidth < 768 ? 15 : 30 },
+                { id: 'starLayerNear', className: 'star-near', count: window.innerWidth < 768 ? 10 : 20 }
+            ];
+
+            layers.forEach(layer => {
+                const container = document.getElementById(layer.id);
+                if (container) {
+                    container.innerHTML = '';
+                    for (let i = 0; i < layer.count; i++) {
+                        const star = document.createElement('div');
+                        star.className = `star-3d ${layer.className}`;
+                        star.style.left = Math.random() * 100 + '%';
+                        star.style.top = Math.random() * 100 + '%';
+                        star.style.animationDelay = Math.random() * 4 + 's';
+                        container.appendChild(star);
+                    }
+                }
+            });
+        }
+
+        // Setup cursor parallax effect
+        function setupCursorParallax() {
+            document.addEventListener('mousemove', (e) => {
+                const { clientX, clientY } = e;
+                const { innerWidth, innerHeight } = window;
+                
+                // Calculate relative mouse position (-1 to 1)
+                const xPos = (clientX / innerWidth - 0.5) * 2;
+                const yPos = (clientY / innerHeight - 0.5) * 2;
+                
+                // Apply different parallax levels to each layer
+                const farLayer = document.getElementById('starLayerFar');
+                const midLayer = document.getElementById('starLayerMid');
+                const nearLayer = document.getElementById('starLayerNear');
+                
+                if (farLayer) {
+                    farLayer.style.transform = `translate(${xPos * 10}px, ${yPos * 10}px)`;
+                }
+                if (midLayer) {
+                    midLayer.style.transform = `translate(${xPos * 20}px, ${yPos * 20}px)`;
+                }
+                if (nearLayer) {
+                    nearLayer.style.transform = `translate(${xPos * 30}px, ${yPos * 30}px)`;
+                }
+            });
+        }
+
+        // Setup mouse trail
+        function setupMouseTrail() {
+            let lastParticleTime = 0;
+            document.addEventListener('mousemove', (e) => {
+                const now = Date.now();
+                if (now - lastParticleTime > 150) {
+                    createSparkParticle(e.clientX, e.clientY);
+                    lastParticleTime = now;
+                }
+            });
+        }
+
+        // Create spark particle
+        function createSparkParticle(x, y) {
+            const particle = document.createElement('div');
+            particle.className = 'spark-particle';
+            
+            // Random spark colors (cosmic theme)
+            const colors = [
+                'rgba(6, 182, 212, 0.8)',
+                'rgba(107, 70, 193, 0.8)',
+                'rgba(16, 185, 129, 0.8)',
+                'rgba(245, 158, 11, 0.8)',
+                'rgba(255, 255, 255, 0.9)'
+            ];
+            
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const size = Math.random() * 4 + 2;
+            
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.background = `radial-gradient(circle, ${color} 0%, transparent 70%)`;
+            particle.style.left = (x - size/2) + 'px';
+            particle.style.top = (y - size/2) + 'px';
+            particle.style.boxShadow = `0 0 ${size * 2}px ${color}`;
+            
+            document.body.appendChild(particle);
+            
+            // Remove particle after animation
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.parentNode.removeChild(particle);
+                }
+            }, 1500);
+        }
+
+        // Setup scroll animations
+        function setupScrollAnimations() {
+            // Add smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add scroll effect to navigation
+            window.addEventListener('scroll', () => {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 100) {
+                    nav.style.background = 'rgba(4, 11, 26, 0.95)';
+                } else {
+                    nav.style.background = 'rgba(4, 11, 26, 0.9)';
+                }
+            });
+
+            // Add intersection observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe feature cards
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            create3DStarLayers();
+        });
+    </script>
+</body>
+</html>
